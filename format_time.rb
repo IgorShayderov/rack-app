@@ -27,7 +27,6 @@ class FormatTime
   end
 
   def valid?
-    p @invalid_formats
     @invalid_formats.empty?
   end
 

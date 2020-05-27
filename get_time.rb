@@ -8,7 +8,7 @@ class GetTime
     formatted_time = response_body(formats)
 
     response.status = formatted_time.include?('Unknown time format') ? 400 : 200
-    headers.each { |header_key, header_value| response.set_header(header_key, header_value)}
+    headers.each { |header_key, header_value| response.set_header(header_key, header_value) }
     response.write formatted_time
 
     response.finish
@@ -17,7 +17,7 @@ class GetTime
   private
 
   def headers
-    { 'Content-Type' => 'text/plain'}
+    { 'Content-Type' => 'text/plain' }
   end
 
   def response_body(formats)
